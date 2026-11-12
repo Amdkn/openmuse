@@ -1,0 +1,17 @@
+{
+  "name": "@aspace-v5/openmuse-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "A'Space adapter for Amdkn/openmuse (gel a4944f4, F8 pas 7) — stdlib only, no upstream code",
+  "scripts": {
+    "test": "node --test tests/adapter.test.ts"
+  },
+  "aspace": {
+    "gel": "a4944f4c471d3dc93b8bfc060b5da309b5216ab2",
+    "bind": "01d57a787946abf04dc15db521ead0e3cf1ecd3c",
+    "fork": "Amdkn/openmuse",
+    "skin": "openmuse"
+  }
+}

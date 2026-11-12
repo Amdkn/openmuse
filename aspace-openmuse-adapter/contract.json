@@ -1,0 +1,68 @@
+{
+  "adapter": "aspace-openmuse-adapter",
+  "version": "0.1.0",
+  "fork": "Amdkn/openmuse",
+  "upstream": "CopilotKit/openmuse",
+  "gel": "a4944f4c471d3dc93b8bfc060b5da309b5216ab2",
+  "gel_short": "a4944f4",
+  "bind": "01d57a787946abf04dc15db521ead0e3cf1ecd3c",
+  "bind_blob": "0ccacccebb34c3a0fe6adba269abf19467ccf21b",
+  "family": "CORE_A0_KERNEL",
+  "owner": "A0-AMADEUS / S1-RICK",
+  "license": "MIT",
+  "skin": {
+    "id": "openmuse",
+    "name": "OpenMuse",
+    "kind": "skin",
+    "trait": "agent personnel : travail qui continue, reprise en main de la même session navigateur"
+  },
+  "gateway": {
+    "endpoint": "http://127.0.0.1:31415/v1/chat/completions",
+    "chain": [
+      "freellmapi/auto",
+      "claude-sonnet-4-5",
+      "qwen3.8-max",
+      "gemini-3.8-flash",
+      "deepseek-v4-flash"
+    ],
+    "retest_minutes": 15,
+    "forbidden_keys": [
+      "CPK_INTELLIGENCE_API_KEY",
+      "CPK_TELEMETRY_ID",
+      "OPENAI_API_KEY"
+    ]
+  },
+  "computer_service": {
+    "port": 4100,
+    "header": "x-openbot-bot-id"
+  },
+  "triage": {
+    "ported": 5,
+    "surfaces": 3,
+    "abandoned": 4,
+    "total": 12
+  },
+  "telemetry_triggers": {
+    "sink-sdk": {
+      "applies": "APPLIQUE",
+      "verdict": "ABANDONNÉ"
+    },
+    "product-telemetry": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    },
+    "desktop-telemetry": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    },
+    "setup-telemetry": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    },
+    "otel-export": {
+      "applies": "N/A",
+      "verdict": "N/A"
+    }
+  },
+  "dependency_pas6": "NAMED — fonctions prime-agent (RLM, /refine, Continual Harness) absentes de la base 655b2a4 ; le chemin /refine de la surface est conditionnel au merge de 9050a1f ; le reste est inconditionnel (§D9)"
+}
